@@ -1,12 +1,6 @@
 const main = document.querySelector('.cards');
 let dimmer = "";
-// const addBtn = document.getElementById('addBtn');
 
-// addBtn.addEventListener('click', ()=> {
-//     card = document.createElement('div');
-//     card.textContent = 'Hey'
-//     main.appendChild(card);
-// })
 
 let opener = document.getElementById("opener");
 
@@ -50,7 +44,7 @@ function Book(title, author, pages, read){
 }
 submitBtn.addEventListener('click', (event) =>{
     event.preventDefault();
-    // alert(`New author is: ${newTitle.value}, new Author is ${newAuthor.value}, pages ${newPages.value}, was read ? ${haveRead.value}`);
+   
     const newBook = new Book(newTitle.value, newAuthor.value, newPages.value, haveRead.checked);
     myLibrary.push(newBook);
     console.log(myLibrary[myLibrary.length-1].title);
@@ -74,26 +68,7 @@ submitBtn.addEventListener('click', (event) =>{
     document.getElementById("title").value = "";
     document.getElementById("author").value = "";
     document.getElementById("pages").value = "";
-    // document.getElementById("myInput").value = "";
-    // dimmer = document.createElement("div");
-    
-    // dimmer.style.width =  window.innerWidth + 'px';
-    // dimmer.style.height = window.innerHeight + 'px';
-    // dimmer.className = 'dimmer';
-    // dimmer = document.querySelector('.deemer');
-    // dimmer.onclick = function(){
-    //     document.body.removeChild(this);   
-    //     lightbox.style.visibility = 'hidden';
-    // }
+
 })
 toggleBtn = document.querySelectorAll('.toggle');
 toggleBtn.addEventListener('click', ()=> alert('clicked'));
-// toggleBtn.addEventListener('click', (e) => {
-//     if (e.target.textContent === 'Read') {
-//         e.target.className = "haveread";
-//     }
-// })
-// removeBtn = document.querySelector('.remove');
-// removeBtn.addEventListener('click', (e) => {
-//     e.closest("div").remove();
-// })
